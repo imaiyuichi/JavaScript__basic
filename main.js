@@ -1,16 +1,14 @@
 'use strict';
 {
-    const scores = [10, 6, 8];
+    // alert('hello') //OKボタンのみ
+    const answer = confirm('削除しますか')  //OK、キャンセル両方が表示される
 
-    let sum = 0;
+    // OK = true
+    // キャンセル = false
 
-    // forEachを使用し、scoresの配列ないを計算する
-    scores.forEach(score => {
-        sum += score;
-    });
-    
-    // length = 文字数
-    const avg = sum / scores.length;
-    console.log(sum);
-    console.log(avg);
+    if(answer) {
+        console.log('削除しました');
+    } else {
+        console.log('キャンセルしました');
+    }
 }
