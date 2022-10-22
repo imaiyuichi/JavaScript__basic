@@ -1,14 +1,20 @@
 'use strict';
 {
-    // alert('hello') //OKボタンのみ
-    const answer = confirm('削除しますか')  //OK、キャンセル両方が表示される
 
-    // OK = true
-    // キャンセル = false
+    let i = 0;
 
-    if(answer) {
-        console.log('削除しました');
-    } else {
-        console.log('キャンセルしました');
+    function showTime() {
+        // 今の日付をコンソールで表示
+        console.log(new Date());
+        // 今日の日付がコンソールをされるたびに、iに1を追加
+        i ++;
+
+        if( i > 2) {
+            // clearInterval = setIntervalの処理を中止する
+            clearInterval(setIntervalID);
+        }
     }
+
+    // setInterval = 引数によって設定された時間毎に処理を実行する
+    const setIntervalID = setInterval(showTime, 1000);
 }
