@@ -1,34 +1,22 @@
 'use strict';
 {
-    // function showTime() {
-    //     console.log(new Date());
-    // }
+    // const name = 'imai';
+    // // toUpperCase = 小文字を大文字に変更する。文字列にのみ使用できる。
+    // console.log(name.toUpperCase());
+    // console.log('finish')
 
-    // // setTimeout = 指定した時間が経過後に一度だけ処理を実行する
-    // setTimeout(showTime, 1000);
+    // プログラムはエラーが発生してしまうと、それ以降の処理が停止してしまう。
+    // 開発者が想定していなかった理由で起きるエラーを例外という。
+    // 例外が発生しても、処理を止めたくない場合はtyr{}で囲ってあげる
 
-    // ↓setTimeoutを使用して繰り返し処理をしたい場合
-    // 関数の中で、setTimeoutを実行する
-
-    // function showTime() {
-    //     console.log(new Date());
-    //     // setTimeout = 指定した時間が経過後に一度だけ処理を実行する
-    //     setTimeout(showTime, 1000);
-    // }
-    // showTime();
-
-    // 繰り返し処理を、指定の回数の後止める方法
-
-    let i = 0;
-
-    function showTime() {
-        console.log(new Date());
-        // setTimeout = 指定した時間が経過後に一度だけ処理を実行する
-        const setTimeoutId = setTimeout(showTime, 1000);
-        i ++;
-        if (i > 2) {
-            clearTimeout(setTimeoutId);
-        }
+    const name = 3;
+    // toUpperCase = 小文字を大文字に変更する。文字列にのみ使用できる。
+    // 今回は使用者が誤って文字列に数字を入れてしまった場合
+    try {
+        console.log(name.toUpperCase());
+    // catchは引数を取ることができる
+    } catch (e) {
+        console.log(e);
     }
-    showTime();
+    console.log('finish');
 }
