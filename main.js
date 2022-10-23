@@ -8,7 +8,12 @@
             this.likeCount = 0;
         }
         show() {
-            console.log(`${this.text} - ${this.likeCount}いいね`);
+            console.log(`${this.text} - ${this.likeCount}likes`);
+        }
+        like() {
+            this.likeCount++;
+            // 同じクラス内のメソッドはthisを使用して呼び正す事ができる
+            this.show();
         }
     }
 
@@ -16,7 +21,9 @@
         new Post('JavaScript勉強中'),
         new Post('プログラミング楽しい'),
     ]
-    posts[0].show();
-    posts[1].show();
+
+    posts[0].like();
+    // posts[0].show();
+    // posts[1].show();
     
 }
